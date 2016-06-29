@@ -5,6 +5,10 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV src /etc/apt/sources.list
 ENV locs /etc/locale.gen
 
+# Remove old sources.list
+RUN mv $src $src.bak
+RUN touch $src
+
 # Add local mirrors
 RUN echo "deb http://mirror.cs.uni-duesseldorf.de/debian/ jessie main contrib non-free" >> $src
 RUN echo "deb-src http://mirror.cs.uni-duesseldorf.de/debian/ jessie main contrib non-free" >> $src
