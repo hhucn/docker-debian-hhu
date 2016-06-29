@@ -19,7 +19,7 @@ RUN echo "deb-src http://security.debian.org/ jessie/updates main contrib non-fr
 
 # Install packages
 RUN apt-get update -qq
-RUN apt-get install locales
+RUN apt-get install -qqy locales
 
 # Create locales
 RUN mv $locs $locs.bak
