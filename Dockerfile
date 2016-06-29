@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Christian Meter <meter@cs.uni-duesseldorf.de
+MAINTAINER Christian Meter <meter@cs.uni-duesseldorf.de>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV src /etc/apt/sources.list
